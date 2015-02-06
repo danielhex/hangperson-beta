@@ -8,7 +8,7 @@ describe HangpersonGame do
       game.guess(letter)
     end
   end
-  describe 'new' do
+  describe 'new', :pending => true do
     subject { HangpersonGame.new('glorp') }
     its(:word)    { should == 'glorp' }
     its(:guesses) { should == '' }
