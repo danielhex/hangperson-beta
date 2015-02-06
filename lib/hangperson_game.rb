@@ -14,9 +14,11 @@ class HangpersonGame
 
   def guess(chara)
   	if @word.include? chara
-  		@guesses << chara
+  		if !@guesses.include? chara
+  			@guesses << chara
   	else
-  		@wrong_guesses << chara
+  		if !@wrong_guesses.include? chara
+  			@wrong_guesses << chara
   	end
   	return true
   end
