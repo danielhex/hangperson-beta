@@ -20,7 +20,7 @@ describe HangpersonGame do
         @game = HangpersonGame.new('garply')
         @valid = @game.guess('a')
       end
-      it 'changes correct guess list', :pending => true do
+      it 'changes correct guess list' do
         @game.guesses.should == 'a'
         @game.wrong_guesses.should == ''
       end
