@@ -16,9 +16,15 @@ class HangpersonGame
   	if @word.include? chara
   		if !@guesses.include? chara
   			@guesses << chara
+  		else
+  			return false
+  		end
   	else
   		if !@wrong_guesses.include? chara
   			@wrong_guesses << chara
+  		else
+  			return false
+  		end
   	end
   	return true
   end
