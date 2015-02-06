@@ -15,6 +15,7 @@ class HangpersonGame
   def guess(chara)
   	if chara == '' or chara == nil 
   		raise ArgumentError
+  	end
   	if chara =~ /[[:alpha:]]/ 
 	  	if @word.include? chara
 	  		if !@guesses.include? chara
