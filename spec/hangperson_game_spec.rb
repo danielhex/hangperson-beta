@@ -54,7 +54,7 @@ describe HangpersonGame do
         @game.guess('q')
         @game.wrong_guesses.should == 'q'
       end
-      it 'returns false', :pending => true do
+      it 'returns false' do
         @game.guess('a').should be(false)
         @game.guess('q').should be(false)
       end
