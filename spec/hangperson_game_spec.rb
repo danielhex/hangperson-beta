@@ -24,7 +24,7 @@ describe HangpersonGame do
         @game.guesses.should == 'a'
         @game.wrong_guesses.should == ''
       end
-      it 'returns true', :pending => true do
+      it 'returns true' do
         @valid.should_not be(false)
       end
     end
