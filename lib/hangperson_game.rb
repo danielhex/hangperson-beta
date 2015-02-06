@@ -5,15 +5,13 @@ class HangpersonGame
 
   # Get a word from remote "random word" service
   attr_accessor :word, :guesses, :wrong_guesses
-  
+
   def initialize(word)
   	@word = word
-  	@guess = ''
-  	@wrong_guess = ''
+  	@guesses = ''
+  	@wrong_guesses = ''
   end
-
   
-
 
   def self.get_random_word
     require 'uri'
