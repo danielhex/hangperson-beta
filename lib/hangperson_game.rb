@@ -15,11 +15,10 @@ class HangpersonGame
   def guess(chara)
   	if @word.include? chara
   		@guesses << chara
-  		return true
   	else
   		@wrong_guesses << chara
-  		return false
   	end
+  	return true
   end
   
 
