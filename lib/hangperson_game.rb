@@ -10,8 +10,8 @@ class HangpersonGame
   	@wrong_guess = ''
   end
 
-  attr_accessor :word, :guess, :wrong_guess
-  attr_reader :word, :guess, :wrong_guess 
+  attr_accessor :word, :guesses, :wrong_guesses
+  attr_reader :word, :guesses, :wrong_guesses 
 
 
   def self.get_random_word
