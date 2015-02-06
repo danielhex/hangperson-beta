@@ -17,6 +17,8 @@ class HangpersonGame
   		@guesses = @guess + chara
   	else
   		@wrong_guesses = @wrong_guesses + chara
+  	end
+  end
   
 
   def self.get_random_word
