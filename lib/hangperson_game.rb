@@ -8,6 +8,7 @@ class HangpersonGame
   	@word = word
   	@guess = ''
   	@wrong_guess = ''
+  end
 
   attr_accessor :word, :guess, :wrong_guess
   attr_reader :word, :guess, :wrong_guess 
