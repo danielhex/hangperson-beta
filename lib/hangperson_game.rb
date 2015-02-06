@@ -13,20 +13,25 @@ class HangpersonGame
   end
 
   def guess(chara)
-  	if @word.include? chara
-  		if !@guesses.include? chara
-  			@guesses << chara
-  		else
-  			return false
-  		end
-  	else
-  		if !@wrong_guesses.include? chara
-  			@wrong_guesses << chara
-  		else
-  			return false
-  		end
-  	end
-  	return true
+  	if chara == '' or chara == nil 
+  		raise ArgumentError
+  	if chara =~ /[[:alpha:]]/ 
+	  	if @word.include? chara
+	  		if !@guesses.include? chara
+	  			@guesses << chara
+	  		else
+	  			return false
+	  		end
+	  	else
+	  		if !@wrong_guesses.include? chara
+	  			@wrong_guesses << chara
+	  		else
+	  			return false
+	  		end
+	  	end
+	  	return true
+	  end
+	  raise ArgumentError
   end
   
 
