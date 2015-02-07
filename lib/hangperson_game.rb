@@ -34,7 +34,18 @@ class HangpersonGame
 	  end
 	  raise ArgumentError
   end
-  
+
+  def word_with_guesses
+  	display = ''
+  	@word.each_char do |i|
+  		if @guesses.include? i
+  			display << i
+  		else
+  			display << '-'
+  		end
+  	end
+  	return display
+  end
 
   def self.get_random_word
     require 'uri'
