@@ -47,6 +47,12 @@ class HangpersonGame
   	return display
   end
 
+  def check_win_or_lose
+  	if word_with_guesses == @word
+  		return :win
+  	end
+  end
+
   def self.get_random_word
     require 'uri'
     require 'net/http'
