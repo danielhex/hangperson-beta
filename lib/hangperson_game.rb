@@ -17,8 +17,9 @@ class HangpersonGame
   		raise ArgumentError
   	end
   	compare = chara.downcase
+  	wordlow = @word.downcase
   	if chara =~ /[[:alpha:]]/ 
-	  	if @word.include? chara
+	  	if wordlow.include? compare
 	  		if !@guesses.include? chara
 	  			@guesses << chara
 	  		else
