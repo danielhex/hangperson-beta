@@ -18,15 +18,17 @@ class HangpersonGame
   	end
   	compare = chara.downcase
   	wordlow = @word.downcase
+  	guesslow = @guesses.downcase
+  	wrongguesslow = @wrong_guesses.downcase
   	if chara =~ /[[:alpha:]]/ 
 	  	if wordlow.include? compare
-	  		if !@guesses.include? chara
+	  		if !guesslow.include? compare
 	  			@guesses << chara
 	  		else
 	  			return false
 	  		end
 	  	else
-	  		if @wrong_guesses.include? chara
+	  		if wrongguesslow.include? compare
 	  			return false
 	  		else
 	  			@wrong_guesses << chara
