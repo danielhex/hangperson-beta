@@ -28,7 +28,7 @@ class HangpersonGame
 	  		if @wrong_guesses.include? chara
 	  			return false
 	  		else
-	  			return true
+	  			@wrong_guesses << chara
 	  		end
 	  	end
 	  	return true
